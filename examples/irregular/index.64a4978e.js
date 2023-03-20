@@ -605,8 +605,8 @@ for(let i = 0; i < 3; i++){
     //plane.position.x = 3;
     scene.add(plane);
 }
-for(let i = 1; i < 6; i++){
-    const planeG = new _three.PlaneGeometry(3, 3);
+for(let i = 0; i < 7; i++){
+    const planeG = new _three.PlaneGeometry(3, 1);
     const planeM = new _three.MeshStandardMaterial({
         color: 0x0000ff,
         side: _three.DoubleSide,
@@ -620,8 +620,8 @@ for(let i = 1; i < 6; i++){
     plane.position.x = i - 3;
     scene.add(plane);
 }
-for(let i = 1; i < 3; i++){
-    const planeG = new _three.PlaneGeometry(6, 3);
+for(let i = 0; i < 4; i++){
+    const planeG = new _three.PlaneGeometry(6, 1);
     const planeM = new _three.MeshStandardMaterial({
         color: 0x00ffFF,
         side: _three.DoubleSide,
@@ -630,7 +630,21 @@ for(let i = 1; i < 3; i++){
     });
     const plane = new _three.Mesh(planeG, planeM);
     plane.position.z = -i + 1.5;
-    plane.position.y = 1.5;
+    plane.position.y = 0.5;
+    //plane.position.x = 3;
+    scene.add(plane);
+}
+for(let i = 0; i < 4; i++){
+    const planeG = new _three.PlaneGeometry(6, 1);
+    const planeM = new _three.MeshStandardMaterial({
+        color: 0x00ffFF,
+        side: _three.DoubleSide,
+        transparent: true,
+        opacity: 0.5
+    });
+    const plane = new _three.Mesh(planeG, planeM);
+    plane.position.z = -i + 1.5;
+    plane.position.y = 2.5;
     //plane.position.x = 3;
     scene.add(plane);
 }

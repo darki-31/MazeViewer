@@ -605,8 +605,8 @@ for(let i = 0; i < 3; i++){
     //plane.position.x = 3;
     scene.add(plane);
 }
-for(let i = 1; i < 6; i++){
-    const planeG = new _three.PlaneGeometry(3, 3);
+for(let i = 0; i < 7; i++){
+    const planeG = new _three.PlaneGeometry(3, 1);
     const planeM = new _three.MeshStandardMaterial({
         color: 0x0000ff,
         side: _three.DoubleSide,
@@ -620,8 +620,8 @@ for(let i = 1; i < 6; i++){
     plane.position.x = i - 3;
     scene.add(plane);
 }
-for(let i = 1; i < 3; i++){
-    const planeG = new _three.PlaneGeometry(6, 3);
+for(let i = 0; i < 4; i++){
+    const planeG = new _three.PlaneGeometry(6, 1);
     const planeM = new _three.MeshStandardMaterial({
         color: 0x00ffFF,
         side: _three.DoubleSide,
@@ -630,81 +630,99 @@ for(let i = 1; i < 3; i++){
     });
     const plane = new _three.Mesh(planeG, planeM);
     plane.position.z = -i + 1.5;
-    plane.position.y = 1.5;
+    plane.position.y = 0.5;
+    //plane.position.x = 3;
+    scene.add(plane);
+}
+for(let i = 0; i < 4; i++){
+    const planeG = new _three.PlaneGeometry(6, 1);
+    const planeM = new _three.MeshStandardMaterial({
+        color: 0x00ffFF,
+        side: _three.DoubleSide,
+        transparent: true,
+        opacity: 0.5
+    });
+    const plane = new _three.Mesh(planeG, planeM);
+    plane.position.z = -i + 1.5;
+    plane.position.y = 2.5;
     //plane.position.x = 3;
     scene.add(plane);
 }
 const orgPoints = [];
-/* orgPoints.push([2, 4, 0.5]);
+// regular maze
+orgPoints.push([
+    2,
+    4,
+    0
+]);
+orgPoints.push([
+    3,
+    4,
+    2
+]);
+orgPoints.push([
+    2,
+    1,
+    2
+]);
+orgPoints.push([
+    1,
+    1,
+    3
+]);
+orgPoints.push([
+    2,
+    3,
+    3
+]);
+orgPoints.push([
+    3,
+    3,
+    1
+]);
+orgPoints.push([
+    2,
+    5,
+    1
+]);
+orgPoints.push([
+    1,
+    5,
+    2
+]);
+orgPoints.push([
+    2,
+    2,
+    2
+]);
+orgPoints.push([
+    3,
+    2,
+    3
+]);
+orgPoints.push([
+    2,
+    6,
+    3
+]);
+orgPoints.push([
+    2,
+    6,
+    0
+]);
+// irregular maze
+/* orgPoints.push([2, 4, 0]);
 orgPoints.push([3, 4, 2]);
 orgPoints.push([2, 1, 2]);
-orgPoints.push([1, 1, 1]);
+orgPoints.push([3, 1, 1]);
+orgPoints.push([2, 3, 1]);
+orgPoints.push([3, 3, 3]);
+orgPoints.push([2, 5, 3]);
+orgPoints.push([1, 5, 1]);
 orgPoints.push([2, 2, 1]);
-orgPoints.push([3, 2, 3]);
-orgPoints.push([2, 3, 3]);
-orgPoints.push([1, 3, 2]);
-orgPoints.push([2, 6, 2]);
-orgPoints.push([2, 6, 0.5]); */ orgPoints.push([
-    2,
-    4,
-    0
-]);
-orgPoints.push([
-    3,
-    4,
-    2
-]);
-orgPoints.push([
-    2,
-    1,
-    2
-]);
-orgPoints.push([
-    1,
-    1,
-    3
-]);
-orgPoints.push([
-    2,
-    3,
-    3
-]);
-orgPoints.push([
-    3,
-    3,
-    1
-]);
-orgPoints.push([
-    2,
-    5,
-    1
-]);
-orgPoints.push([
-    1,
-    5,
-    2
-]);
-orgPoints.push([
-    2,
-    2,
-    2
-]);
-orgPoints.push([
-    3,
-    2,
-    3
-]);
-orgPoints.push([
-    2,
-    6,
-    3
-]);
-orgPoints.push([
-    2,
-    6,
-    0
-]);
-const points = [];
+orgPoints.push([1, 2, 3]);
+orgPoints.push([2, 6, 3]);
+orgPoints.push([2, 6, 0]); */ const points = [];
 points.push(orgPoints[0][1] - 3.5, orgPoints[0][0] - 0.5, -orgPoints[0][2] + 2);
 for(var i = 1; i < orgPoints.length; i++){
     points.push(orgPoints[i][1] - 3.5, orgPoints[i - 1][0] - 0.5, -orgPoints[i][2] + 2.0);
@@ -725,7 +743,7 @@ text2.style.position = "absolute";
 text2.style.width = 100;
 text2.style.height = 100;
 //text2.style.backgroundColor = "blue";
-text2.innerHTML = "regular, length: 30";
+text2.innerHTML = "irregular, length: 32";
 text2.style.top = "200px";
 text2.style.left = "200px";
 document.body.appendChild(text2);
