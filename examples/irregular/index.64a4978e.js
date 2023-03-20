@@ -670,12 +670,12 @@ orgPoints.push([
 ]);
 orgPoints.push([
     2,
-    2,
+    3,
     1
 ]);
 orgPoints.push([
     3,
-    2,
+    3,
     3
 ]);
 orgPoints.push([
@@ -690,12 +690,12 @@ orgPoints.push([
 ]);
 orgPoints.push([
     2,
-    3,
+    2,
     1
 ]);
 orgPoints.push([
     1,
-    3,
+    2,
     3
 ]);
 orgPoints.push([
@@ -729,7 +729,7 @@ text2.style.position = "absolute";
 text2.style.width = 100;
 text2.style.height = 100;
 //text2.style.backgroundColor = "blue";
-text2.innerHTML = "irregular, length: 30";
+text2.innerHTML = "irregular, length: 32";
 text2.style.top = "200px";
 text2.style.left = "200px";
 document.body.appendChild(text2);
