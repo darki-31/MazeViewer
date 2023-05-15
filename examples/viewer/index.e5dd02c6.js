@@ -570,7 +570,7 @@ function loadData() {
             populate_with_new_rows(tbody);
         }
     };
-    xhr.open("GET", "/data/paths2.txt");
+    xhr.open("GET", "/MazeViewer/examples/viewer/data/paths2.txt");
     xhr.send();
 }
 function populate_with_new_rows(new_tbody) {
