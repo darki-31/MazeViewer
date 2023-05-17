@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <title>3D hole maze, 4x5x5</title>
+    <style>
+    </style>
+  <script type="module" crossorigin src="/MazeViewer/4x5x5/assets/main-44b32cf4.js"></script>
+  <link rel="modulepreload" crossorigin href="/MazeViewer/4x5x5/assets/style-861744d9.js">
+  <link rel="stylesheet" href="/MazeViewer/4x5x5/assets/style-60c57cf0.css">
+</head>
+<body>
+    <div id="panel">
+        <table id="myTable" class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                <th id="pathNbrTh">path</th>
+                <th id="pathLengthFullTh">length3d</th>
+                <th id="pathLengthFlatTh">length2d</th>
+                <th id="pathRegTh">regularity</th>
+                <th id="pathUpTh">up</th>
+                <th id="pathDownTh">down</th>
+                <th id="pathDirSwitchTh">dirSwitch</th>
+                <th id="pathSameDirTh">sameDir</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+
+    <iframe id="viewer" name="viewer" allow="fullscreen; xr-spatial-tracking;" src="maze.html"></iframe>
+
+    
+</body>
+</html>
