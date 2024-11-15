@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <title>3D hole maze, 4x5x5</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="panel">
+        <label for="cars">Choose number of holes:</label>
+        <select name="holesToShow" id="holesToShow">
+            <option value="all">all</option>
+        </select>
+
+        <table id="myTable" class="table">
+            <thead>
+                <tr>
+                    <th id="pathNbrTh">path</th>
+                    <th id="holesTh">holes</th>
+                    <th id="pathLengthFullTh">length3d</th>
+                    <th id="pathRegTh">regularity</th>
+                    <th id="leftTurnsTh">left</th>
+                    <th id="rightTurnsTh">right</th>
+                    <th id="spinTh">spin</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+
+    </div>
+
+    <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+        <div class="sidebar-resize-indicator"></div>
+    </div>
+
+    <div id="viewer-wrapper">
+        <iframe id="viewer" name="viewer" allow="fullscreen; xr-spatial-tracking;" src="maze_view.html"></iframe>
+    </div>
+
+    <script src="load_data.js" type="module"></script>
+</body>
+
+</html>

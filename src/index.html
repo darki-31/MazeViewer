@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-16">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <title>3D hole maze viewer</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <h1>Select the maze from the list</h1>
+
+    <ul>
+        <li>4x5x5 <a href="main_view.html?maze=up12">maze</a> with up to 12 holes. Excluded corridors:
+            <ul>
+                <li>level 1: 1 and 5</li>
+                <li>level 2: 1</li>
+                <li>level 3: 1</li>
+                <li>level 4: 1 and 5</li>
+            </ul>
+        </li>
+        <li>4x5x5 <a href="main_view.html?maze=14_spin">maze</a> with 14 holes. with "spin" filter: 0.4 &#x2264; spin
+            &#x2264; 0.6.
+            Excluded corridors: <ul>
+                <li>level 1: 1 and 5</li>
+                <li>level 3: 1</li>
+                <li>level 4: 1</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
